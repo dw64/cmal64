@@ -1,5 +1,8 @@
 #!/bin/bash
 
+# To execute: 
+#    bash <(curl -fsSL https://raw.github.com/dw64/cmal64/master/act) name
+
 HOME=/usr/share/cma
 
 git clone https://github.com/dw64/cmal64.git "$HOME"
