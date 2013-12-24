@@ -1,0 +1,6 @@
+#!/bin/bash
+
+HOME=/usr/share/cma
+
+cp -f $HOME/cron /etc/cron.d/cma
+chown root.root /etc/cron.d/cma

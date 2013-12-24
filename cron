@@ -1,0 +1,3 @@
+0   9   * * *   root   /usr/share/cma/day     || : 
+0  21   * * *   root   /usr/share/cma/night   || :
+5 */3   * * *   root   /usr/share/cma/update  || :

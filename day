@@ -1,0 +1,11 @@
+#!/bin/bash
+
+HOME=/usr/share/cma
+today=$(TZ=EET date +"%Y-%m-%d")
+
+if grep -q "$today" $HOME/offs 
+then 
+    pidof minerd || $HOME/start
+else
+    pidof minerd && $HOME/stop
+fi

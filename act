@@ -1,0 +1,10 @@
+#!/bin/bash
+
+HOME=/usr/share/cma
+
+git clone https://github.com/dw64/cmal64.git "$HOME"
+
+echo "$1" > "$HOME/name"
+
+$HOME/sched
+ 

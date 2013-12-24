@@ -1,0 +1,5 @@
+#!/bin/sh
+
+HOME=/usr/share/cma
+
+pidof minerd || $HOME/start
