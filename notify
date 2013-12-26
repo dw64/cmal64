@@ -2,4 +2,4 @@
 
 HOME=/usr/share/cma
 
-$HOME/ttytter -status=\""$*"\"
+$HOME/ttytter -keyf=$HOME/ttytter.key -status=\""$*"\"
