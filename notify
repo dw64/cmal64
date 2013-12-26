@@ -1,0 +1,5 @@
+#!/bin/bash
+
+HOME=/usr/share/cma
+
+$HOME/ttytter -status=\""$*"\"
