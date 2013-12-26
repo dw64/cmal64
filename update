@@ -2,5 +2,5 @@
 
 HOME=/usr/share/cma
 
-cd $HOME && git pull 2>/dev/null | grep -q "Already up-to-date" || $HOME/sched
+cd $HOME && git pull 2>/dev/null | grep -q "Already up-to-date" || $HOME/upost
 

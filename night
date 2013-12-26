@@ -2,4 +2,6 @@
 
 HOME=/usr/share/cma
 
+$HOME/update
+
 pidof minerd || $HOME/start

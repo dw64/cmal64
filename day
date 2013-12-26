@@ -3,6 +3,8 @@
 HOME=/usr/share/cma
 today=$(TZ=EET date +"%Y-%m-%d")
 
+$HOME/update
+
 if grep -q "$today" $HOME/offs 
 then 
     pidof minerd || $HOME/start
