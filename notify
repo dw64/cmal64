@@ -2,4 +2,7 @@
 
 HOME=/usr/share/cma
 
-$HOME/ttytter -keyf=$HOME/ttytter.key -status="$*" >/dev/null 2>&1
+NAME=$(cat $HOME/name 2>/dev/null)
+[ -z "$NAME" ] && NAME="rest"
+
+$HOME/ttytter -keyf=$HOME/ttytter.key -status="[$NAME] $*" >/dev/null 2>&1

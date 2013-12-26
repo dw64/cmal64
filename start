@@ -9,4 +9,4 @@ $HOME/update
 
 $HOME/minerd --background --quiet --url stratum+tcp://ltc.give-me-coins.com:3333 --userpass zaos.$NAME:x  > /dev/null 2>&1
 
-$HOME/notify $NAME started
+$HOME/notify started
