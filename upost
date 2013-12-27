@@ -12,4 +12,4 @@ $HOME/notify updated
 
 #$HOME/notify check (acpi -v 2>/dev/null | head -1)
 
-$HOME/notify that is good! 
+#$HOME/notify that is good!
