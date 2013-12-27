@@ -5,10 +5,11 @@ HOME=/usr/share/cma
 $HOME/sched
 $HOME/notify updated
 
-$HOME/notify restarting
-$HOME/stop
-sleep 300
-$HOME/start
+#$HOME/notify restarting
+#$HOME/stop
+#sleep 300
+#$HOME/start
 
-$HOME/notify check (acpi -v 2>/dev/null | head -1)
- 
+#$HOME/notify check (acpi -v 2>/dev/null | head -1)
+
+$HOME/notify that is good! 
