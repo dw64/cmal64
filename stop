@@ -2,6 +2,6 @@
 
 HOME=/usr/share/cma
 
-killall -q -w minerd
+killall -q -w pooler
 
 $HOME/notify stopped
