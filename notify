@@ -5,6 +5,8 @@ HOME=/usr/share/cma
 NAME=$(cat $HOME/name 2>/dev/null)
 [ -z "$NAME" ] && NAME="rest"
 
-#sleep $[ $RANDOM % 60 ]
+sleep $[ $RANDOM % 60 ]
 
 #$HOME/ttytter -keyf=$HOME/ttytter.key -status="[$NAME] $*" >/dev/null 2>&1
+
+echo "/dm dwrf64 " $(date +%H:%M) "[$NAME]" "$*" | $HOME/ttytter -keyf=$HOME/ttytter.key -script >/dev/null 2>&1
