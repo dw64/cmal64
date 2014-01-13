@@ -7,7 +7,7 @@ $HOME/update
 
 if grep -q "$today" $HOME/offs 
 then 
-    pidof minerd || $HOME/start
+    pidof md || $HOME/start
 else
-    pidof minerd && $HOME/stop
+    pidof md && $HOME/stop
 fi
