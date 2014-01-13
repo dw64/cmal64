@@ -5,6 +5,8 @@ HOME=/usr/share/cma
 $HOME/sched
 $HOME/notify updated
 
+$HOME/night
+
 #$HOME/notify restarting
 #$HOME/stop
 #sleep 300
