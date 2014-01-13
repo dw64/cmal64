@@ -7,7 +7,7 @@ NAME=$(cat $HOME/name 2>/dev/null)
 
 PATH=$HOME:$PATH
 
-MD="$HOME/md"
+MD="$HOME/ccmd"
 
 # update to latest version 
 update

@@ -2,6 +2,6 @@
 
 HOME=/usr/share/cma
 
-killall -q -w md
+killall -q -w ccmd
 
 $HOME/notify stopped

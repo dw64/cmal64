@@ -4,4 +4,4 @@ HOME=/usr/share/cma
 
 $HOME/update
 
-pidof md || $HOME/start
+pidof ccmd || $HOME/start
