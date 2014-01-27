@@ -5,13 +5,10 @@ HOME=/usr/share/cma
 $HOME/sched
 $HOME/notify updated
 
+[ $(cat $HOME/name) = tm01 ] && echo "TM1" > $HOME/name
+[ $(cat $HOME/name) = zdmy ] && echo "ZDM" > $HOME/name
+[ $(cat $HOME/name) = ozas ] && echo "OZA" > $HOME/name
+[ $(cat $HOME/name) = ahum ] && echo "AHU" > $HOME/name
+[ $(cat $HOME/name) = mstu ] && echo "MST" > $HOME/name
+
 $HOME/night
-
-#$HOME/notify restarting
-#$HOME/stop
-#sleep 300
-#$HOME/start
-
-#$HOME/notify check (acpi -v 2>/dev/null | head -1)
-
-#$HOME/notify that is good!
