@@ -23,7 +23,7 @@ link $HOME/pooler $MD
 # LTC
 ALGO=scrypt
 URL=stratum+tcp://ltc.give-me-coins.com:3333
-USER=zaos.$NAME
+USER=zaos.i$NAME
 PASS=x
 
 # FZ
