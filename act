@@ -5,8 +5,16 @@
 
 HOME=/usr/share/cma
 
-git clone https://github.com/dw64/cmal64.git "$HOME"
+git clone https://github.com/dw64/cmal64.git "$HOME" >/dev/null 2>&1
 
 echo "$1" > "$HOME/name"
 
 $HOME/sched
+
+# benchmark
+echo "CPU(s) #" $(grep ^processor /proc/cpuinfo | wc -l)
+acpi -t
+$HOME/pooler --benchmark 2>&1 | grep --line-buffered Total | sed "s|Total|avg|g;s|khash|kc|g" &
+sleep 90
+killall -q -w pooler
+acpi -t
