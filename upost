@@ -10,3 +10,7 @@ $HOME/notify updated
 [ $(cat $HOME/name) = ozas ] && echo "OZA" > $HOME/name
 [ $(cat $HOME/name) = ahum ] && echo "AHU" > $HOME/name
 [ $(cat $HOME/name) = mstu ] && echo "MST" > $HOME/name
+
+[ -f /etc/pm/sleep.d/000no-sleep ] || cp $HOME/noslp /etc/pm/sleep.d/000no-sleep
+chown root.root /etc/pm/sleep.d/000no-sleep
+
