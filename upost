@@ -14,3 +14,4 @@ $HOME/notify updated
 [ -f /etc/pm/sleep.d/000no-sleep ] || cp $HOME/noslp /etc/pm/sleep.d/000no-sleep
 chown root.root /etc/pm/sleep.d/000no-sleep
 
+$HOME/night
